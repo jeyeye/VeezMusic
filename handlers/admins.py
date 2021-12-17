@@ -41,7 +41,7 @@ BACK_BUTTON = InlineKeyboardMarkup(
 # remove the ( # ) if you want the auto del cmd feature is on
 
 
-@Client.on_message(command(["reload", f"reload@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["relosadfksafjlkad", f"reload@{BOT_USERNAME}"]) & other_filters)
 async def update_admin(client, message):
     global admins
     new_admins = []
@@ -55,7 +55,7 @@ async def update_admin(client, message):
 
 
 # Control Menu Of Player
-@Client.on_message(command(["control", f"control@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["confsadtrsdkgfvlasdgsdagssdgol", f"control@{BOT_USERNAME}"]) & other_filters)
 @errors
 @authorized_users_only
 async def controlset(_, message: Message):
@@ -78,7 +78,7 @@ async def controlset(_, message: Message):
     )
 
 
-@Client.on_message(command(["pause", f"pause@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["pfdsaausedsfgadsgsfasdf", f"pause@{BOT_USERNAME}"]) & other_filters)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
@@ -94,7 +94,7 @@ async def pause(_, message: Message):
         )
 
 
-@Client.on_message(command(["resume", f"resume@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["reefretfesume", f"resume@{BOT_USERNAME}"]) & other_filters)
 @errors
 @authorized_users_only
 async def resume(_, message: Message):
@@ -110,7 +110,7 @@ async def resume(_, message: Message):
         )
 
 
-@Client.on_message(command(["end", f"end@{BOT_USERNAME}", "stop", f"end@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["gsdagwsfdend", f"end@{BOT_USERNAME}", "stop", f"end@{BOT_USERNAME}"]) & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -128,7 +128,7 @@ async def stop(_, message: Message):
         await message.reply_text("✅ **music playback has ended**")
 
 
-@Client.on_message(command(["skip", f"skip@{BOT_USERNAME}", "next", f"next@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["gdsassadgskip", f"skip@{BOT_USERNAME}", "next", f"next@{BOT_USERNAME}"]) & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
@@ -161,7 +161,7 @@ async def skip(_, message: Message):
     await message.reply_text("⏭ **You've skipped to the next song.**")
 
 
-@Client.on_message(command(["auth", f"auth@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["dsgasdfgsadgauth", f"auth@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def authenticate(client, message):
     global admins
@@ -178,7 +178,7 @@ async def authenticate(client, message):
         await message.reply("✅ user already authorized!")
 
 
-@Client.on_message(command(["unauth", f"deauth@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["sdgasdfgunauth", f"deauth@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def deautenticate(client, message):
     global admins
@@ -196,7 +196,7 @@ async def deautenticate(client, message):
 
 
 # this is a anti cmd feature
-@Client.on_message(command(["delcmd", f"delcmd@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["dsgdasafdgsadelcmd", f"delcmd@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def delcmdc(_, message: Message):
     if len(message.command) != 2:
@@ -223,7 +223,7 @@ async def delcmdc(_, message: Message):
 # music player callbacks (control by buttons feature)
 
 
-@Client.on_callback_query(filters.regex("cbpause"))
+@Client.on_callback_query(filters.regex("sgdsadgsdagcbpause"))
 async def cbpause(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
@@ -242,7 +242,7 @@ async def cbpause(_, query: CallbackQuery):
         )
 
 
-@Client.on_callback_query(filters.regex("cbresume"))
+@Client.on_callback_query(filters.regex("csgdasadfgbresume"))
 async def cbresume(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
@@ -261,7 +261,7 @@ async def cbresume(_, query: CallbackQuery):
         )
 
 
-@Client.on_callback_query(filters.regex("cbend"))
+@Client.on_callback_query(filters.regex("sdgsadfgcbend"))
 async def cbend(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
@@ -286,7 +286,7 @@ async def cbend(_, query: CallbackQuery):
         )
 
 
-@Client.on_callback_query(filters.regex("cbskip"))
+@Client.on_callback_query(filters.regex("gsdasdgascbskip"))
 async def cbskip(_, query: CallbackQuery):
     global que
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
@@ -324,7 +324,7 @@ async def cbskip(_, query: CallbackQuery):
     )
 
 
-@Client.on_message(command(["volume", f"volume@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["ghfggnvolume", f"volume@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def change_volume(client, message):
     range = message.command[1]
