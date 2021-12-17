@@ -113,7 +113,7 @@ async def generate_cover(title, thumbnail, ctitle):
 
 
 @Client.on_message(
-    command(["playlist", f"playlist@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+    command(["plasfsdavgfdsagdsfgvaylist", f"playlist@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 async def playlist(client, message):
 
@@ -192,7 +192,7 @@ def r_ply(type_):
 
 
 @Client.on_message(
-    command(["player", f"player@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+    command(["dsgfsadplayer", f"player@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 @authorized_users_only
 async def settings(client, message):
@@ -215,7 +215,7 @@ async def settings(client, message):
 
 
 @Client.on_message(
-    command(["music", f"music@{BOT_USERNAME}"])
+    command(["fsdafsadmusic", f"music@{BOT_USERNAME}"])
     & ~filters.edited
     & ~filters.bot
     & ~filters.private
@@ -256,7 +256,7 @@ async def music_onoff(_, message):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"^(playlist)$"))
+@Client.on_callback_query(filters.regex(pattern=r"^(psdafslaylist)$"))
 async def p_cb(b, cb):
 
     keyboard = InlineKeyboardMarkup(
@@ -302,7 +302,7 @@ async def p_cb(b, cb):
 
 
 @Client.on_callback_query(
-    filters.regex(pattern=r"^(play|pause|skip|leave|puse|resume|menu|cls)$")
+    filters.regex(pattern=r"^(playsadsa|psafdasfause|sasfkip|lasfasdeave|psadfuse|reasfassume|measfasnu|cafasdls)$")
 )
 @cb_admin_check
 async def m_cb(b, cb):
@@ -487,7 +487,7 @@ async def m_cb(b, cb):
             )
 
 
-@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["pasdasfaslay", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(_, message: Message):
     chat_id = get_chat_id(message.chat)
     bttn = InlineKeyboardMarkup(
@@ -797,7 +797,7 @@ async def play(_, message: Message):
         os.remove("final.png")
 
 
-@Client.on_callback_query(filters.regex(pattern=r"plll"))
+@Client.on_callback_query(filters.regex(pattern=r"dasfasplll"))
 async def lol_cb(b, cb):
     
     bttn = InlineKeyboardMarkup(
@@ -925,7 +925,7 @@ async def lol_cb(b, cb):
                 os.remove("final.png")
 
 
-@Client.on_message(command(["ytplay", f"ytplay@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["yasfdsatplay", f"ytplay@{BOT_USERNAME}"]) & other_filters)
 async def ytplay(_, message: Message):
     chat_id = get_chat_id(message.chat)
     bttn = InlineKeyboardMarkup(
