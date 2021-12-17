@@ -8,7 +8,7 @@ from pyrogram.errors import UserAlreadyParticipant
 
 
 @Client.on_message(
-    command(["join", f"join@{BOT_USERNAME}"]) & ~filters.private & ~filters.bot
+    command(["jodsaasin", f"jadsdasdoin@{BOT_USERNAME}"]) & ~filters.private & ~filters.bot
 )
 @authorized_users_only
 @errors
@@ -44,7 +44,7 @@ async def join_group(client, message):
 
 
 @Client.on_message(
-    command(["leave", f"leave@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+    command(["lsadaseave", f"leave@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 @authorized_users_only
 async def leave_group(client, message):
@@ -59,7 +59,7 @@ async def leave_group(client, message):
         return
 
 
-@Client.on_message(command(["leaveall", f"leaveall@{BOT_USERNAME}"]))
+@Client.on_message(command(["leaasdasveall", f"leaveall@{BOT_USERNAME}"]))
 @sudo_users_only
 async def leave_all(client, message):
     if message.from_user.id not in SUDO_USERS:
